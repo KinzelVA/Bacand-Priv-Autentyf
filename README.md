@@ -49,3 +49,14 @@ JWT содержит:
 
 ```http
 Authorization: Bearer <access_token>
+
+Локальный запуск
+python -m venv .venv
+.\.venv\Scripts\activate  # Windows
+
+pip install -r requirements.txt   # или pip install django djangorestframework PyJWT psycopg2-binary
+
+python manage.py migrate
+python manage.py createsuperuser
+
+python manage.py runserver
